@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent  = new Intent(context, EditActivity.class);
                 Note   newNote = new Note(Note.NO_ID);
+                intent.putExtra(EditActivity.EDIT_NOTE_KEY, newNote);
                 startActivityForResult(intent, EDIT_REQUEST_CODE);
 
             }
